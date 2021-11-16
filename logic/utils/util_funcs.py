@@ -13,9 +13,9 @@ import pygame
 from .paths import *
 
 
-def load_image(name, scale=1, alpha=False):
+def load_image(name: str, scale: int = 1, alpha: bool = False):
     """loads an image"""
-    image = pygame.image.load(P_RESOURCES / f"{name}.png")
+    image = pygame.image.load(P_IMAGES / f"{name}.png")
     if scale != 1:
         image = scale_surf(image, scale)
     if alpha:
@@ -23,12 +23,12 @@ def load_image(name, scale=1, alpha=False):
     return image.convert()
 
 
-def scale_surf(surf, scale):
+def scale_surf(surf: pygame.surface.Surface, scale: float):
     """Scales a surface by amount 'scale'"""
     return pygame.transform.scale(surf, (int(surf.get_width() * scale), int(surf.get_height() * scale)))
 
 
-def rotate_surf(surf, angle) -> pygame.surface.Surface:
+def rotate_surf(surf: pygame.surface.Surface, angle: float) -> pygame.surface.Surface:
     """Rotates a surface"""
     return pygame.transform.rotate(surf, angle)
 
