@@ -1,7 +1,6 @@
 __author__ = None
 __version__ = 0
 __name__ = None
-print(f"{__name__}: {__version__}")
 
 
 # Imports
@@ -18,3 +17,6 @@ class Game:  # Game class used to run the game
     def run(self):  # Run the game
         while True:
             self.update()
+
+
+print(f"{__name__}: {__version__}")
