@@ -53,7 +53,7 @@
 First of all lets take a look at the data/config files. 
 - input:  
 >> You can use this file to add keybinds (need file to load them)
-> ```json
+> ```
 > "__action_name__": {
 > "trigger": "press" or "hold",
 > "binding": ["keyboard", [x]] or ["mouse" [y]]
